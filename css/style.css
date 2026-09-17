@@ -841,7 +841,7 @@ h3 {
 
   display: none;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
 }
 
 .dock-nav.is-open .dock-nav__menu{ display: flex; }
