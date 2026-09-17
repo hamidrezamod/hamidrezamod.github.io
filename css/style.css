@@ -2107,7 +2107,7 @@ main, footer, .dock-nav{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 22px;
+    width: 17px;
     height: 22px;
     text-decoration: none;
   }
@@ -2147,21 +2147,21 @@ main, footer, .dock-nav{
   .mnav__menu{
     position: absolute;
     left: 50%;
-    bottom: 0px;              /* دقیقاً بچسبد به نوبار */
+    bottom: 50px;              /* دقیقاً بچسبد به نوبار */
     transform: translateX(-50%);
 
-    padding: 16px 24px;
+    padding: 16px 0px;
     background: #343333;
     color: #F7F4EF;
 
     box-shadow: 0 0 7px rgba(0,0,0,0.3);
 
     /* اتصال به نوبار: پایین گرد نیست */
-    border-radius: 16px 16px 0 0;
+    border-radius: 8px 8px 0 0;
 
     display: none;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
 
     min-width: 150px;
   }
