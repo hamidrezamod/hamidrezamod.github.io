@@ -2147,10 +2147,10 @@ main, footer, .dock-nav{
   .mnav__menu{
     position: absolute;
     left: 50%;
-    bottom: 50px;              /* دقیقاً بچسبد به نوبار */
+    bottom: 0px;              /* دقیقاً بچسبد به نوبار */
     transform: translateX(-50%);
 
-    padding: 14px 16px;
+    padding: 16px 24px;
     background: #343333;
     color: #F7F4EF;
 
