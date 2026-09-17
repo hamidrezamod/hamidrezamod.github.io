@@ -1588,6 +1588,7 @@ main, footer, .dock-nav{
 
   /* hero top padding = 64 */
   .hero{ padding-top: 64px; }
+   .hero{ padding-bottom: 160px; }
 
    .portrait {
   position: relative;
