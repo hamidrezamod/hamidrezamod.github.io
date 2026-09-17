@@ -2084,7 +2084,7 @@ main, footer, .dock-nav{
 
     width: min(341.44px, calc(100% - 32px));
     height: 50px;
-    padding: 0 16px;
+    padding: 0 24px;
 
     display: flex;
     align-items: center;
