@@ -1049,7 +1049,13 @@ main, footer, .dock-nav{
   transition: filter 350ms var(--ease-apple);
 }
 
-/* ---------- ARTICLE MODAL (desktop) ---------- */
+/* =========================================================
+   ARTICLE MODAL — DESKTOP (Figma exact)
+   Panel width: 1376
+   Inner content width: 1120 (128 margin each side)
+   Closebar: full width with 128 side padding, sticky
+========================================================= */
+
 .article-modal{
   position: fixed;
   inset: 0;
@@ -1082,11 +1088,12 @@ main, footer, .dock-nav{
   background: rgba(0,0,0,0.18);
 }
 
+/* Panel */
 .article-modal__panel{
   position: relative;
 
   width: 1376px;
-  max-width: calc(100% - 64px);
+  max-width: 1376px;
 
   max-height: calc(100vh - 48px);
   overflow: auto;
@@ -1094,10 +1101,13 @@ main, footer, .dock-nav{
   background: var(--article-bg);
   color: var(--article-ink);
   box-shadow: var(--article-shadow);
-
   border-radius: 8px;
+
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
+
+  /* keeps layout stable when scrollbar appears (prevents shifting) */
+  scrollbar-gutter: stable;
 
   transform: translateY(90px);
   opacity: 0;
@@ -1110,11 +1120,12 @@ main, footer, .dock-nav{
   opacity: 1;
 }
 
-/* minimal scrollbar (panel) */
+/* Minimal scrollbar (panel only) */
 .article-modal__panel{
   scrollbar-width: thin;
   scrollbar-color: rgba(65,63,62,0.35) transparent;
 }
+
 .article-modal__panel::-webkit-scrollbar{ width: 12px; }
 .article-modal__panel::-webkit-scrollbar-track{ background: transparent; }
 .article-modal__panel::-webkit-scrollbar-thumb{
@@ -1124,20 +1135,25 @@ main, footer, .dock-nav{
   background-clip: content-box;
 }
 
+/* Closebar: full width, sticky, background shows full width */
 .article-modal__closebar{
   position: sticky;
   top: 0;
-  z-index: 5;
-width: 1376px;
-  height: 88px;
-  padding: 32px 128px 16px;
+  z-index: 10;
+
+  width: 100%;
+  height: 88px;                  /* (32 + 40 + 16) */
+
+  padding: 32px 128px 16px;      /* top / sides / bottom */
 
   background: var(--article-bg);
+
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
 }
 
+/* Close button (keep your existing icon sizing) */
 .article-modal__close{
   width: 40px;
   height: 40px;
@@ -1151,15 +1167,16 @@ width: 1376px;
 .article-modal__close svg{
   width: 40px;
   height: 40px;
+  display: block;
 }
 
+/* Inner content area: 1120 centered => 128 margins each side */
 .article-modal__content{
-  width: 1376px;
-  max-width: calc(100% - 256px);
-  margin: 64px auto 120px;
+  width: 1120px;
+  margin: 64px auto 120px; /* closebar -> hero = 64 */
 }
 
-/* loader */
+/* Loader (اگر داری) */
 .article-loader{
   min-height: 360px;
   display: grid;
@@ -1171,43 +1188,59 @@ width: 1376px;
   border-radius: 999px;
   border: 2px solid rgba(65,63,62,0.22);
   border-top-color: rgba(65,63,62,0.85);
-  animation: spin 900ms linear infinite;
+  animation: articleSpin 900ms linear infinite;
 }
-@keyframes spin{ to{ transform: rotate(360deg); } }
+@keyframes articleSpin{ to{ transform: rotate(360deg); } }
 
-/* article inner layout (desktop) */
+
+/* =========================================================
+   ARTICLE SHEET — HERO (1120 width)
+   Left column (image): 585
+   Gap: 32
+   Right column (titles): 503
+   Total: 585 + 32 + 503 = 1120
+========================================================= */
+
 .article-sheet__hero{
-  width: 1120px;
-   pdding: 0px 0px 0px;
   display: grid;
-  grid-template-columns: 548px 1fr;
+  grid-template-columns: 585px 503px;
   column-gap: 32px;
-  align-items: center;
+  align-items: start;
 }
 
-.article-sheet__media{ width: 584px; }
+/* Media column (image + meta) */
+.article-sheet__media{
+  width: 585px;
+}
 
+/* Cover */
 .article-sheet__cover{
-  width: 584px;
+  width: 585px;
   height: auto;
+  display: block;
   object-fit: cover;
 }
 
+/* Meta under image: width 585, aligned to RIGHT edge of image */
 .article-sheet__meta{
-   width: 548px;
-  margin-top: 8px;
-   
+  width: 585px;
+  margin-top: 8px;               /* meta -> image = 8 */
+
   display: flex;
-  justify-content: flex-start;
-   
+  justify-content: flex-end;      /* align to right edge */
   align-items: center;
-  gap: 16px;
+
+  gap: 16px;                      /* author -> divider -> tag1 -> tag2 */
 
   font-family: "Doran", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 48px;
+  color: var(--article-ink);
   text-align: right;
+
+  /* if tags wrap, keep right edge aligned */
+  flex-wrap: wrap;
 }
 
 .article-meta__divider{
@@ -1220,55 +1253,68 @@ width: 1376px;
 .article-meta__tag{
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 4px;                       /* icon -> text = 4 */
 }
+
 .article-meta__icon{
   width: 16px;
   height: 16px;
+  display: block;
 }
 
-.article-sheet__headings{ 
-   width: 503px;
-   text-align: right; }
+/* Titles column: right-aligned and stuck to right edge of its 503px column */
+.article-sheet__headings{
+  width: 503px;
+  justify-self: end;
+  text-align: right;
+}
 
 .article-sheet__title-en{
   margin: 0;
+  font-family: "Crimson Pro", serif;
   font-size: 40px;
   font-weight: 600;
   line-height: 44px;
+  color: var(--article-ink);
   text-align: right;
 }
 
 .article-sheet__title-fa{
-  margin: 16px 0 0;
+  margin: 16px 0 0;               /* EN -> FA = 16 */
   font-family: "Doran", sans-serif;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;               /* اگر فایل 600 نداری، خود مرورگر نزدیک‌ترین وزن را انتخاب می‌کند */
   line-height: 44px;
+  color: var(--article-ink);
   text-align: right;
 }
 
-.article-sheet__body{ 
-   width: 1120px;
-   padding: 0px 0px 0px;
-   margin-top: 64px; }
+/* Body spacing: meta -> main text = 64 */
+.article-sheet__body{
+  margin-top: 64px;
+  width: 100%;
+}
 
+/* Paragraph sections spacing (unchanged from your previous rules) */
 .article-sec__title{
-  margin: 0 0 16px;
+  margin: 0 0 16px;               /* title -> paragraph = 16 */
   font-family: "Doran", sans-serif;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 800;               /* اگر می‌خوای دقیقاً Black/900: بگو تا 900 کنیم */
   line-height: 48px;
+  color: var(--article-ink);
 }
 
 .article-sec__p{
-  margin: 0 0 16px;
+  margin: 0 0 16px;               /* paragraph -> paragraph = 16 */
   font-family: "Doran", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 48px;
+  color: var(--article-ink);
   text-align: justify;
 }
+
 
 /* ---------- THEATRE MODAL (desktop) ---------- */
 .theatre-modal{
