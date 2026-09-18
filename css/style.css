@@ -2152,7 +2152,7 @@ main, footer, .dock-nav{
   .mnav__menu{
     position: absolute;
     left: -16px;
-    bottom: 34px;              /* دقیقاً بچسبد به نوبار */
+    bottom: 38px;              /* دقیقاً بچسبد به نوبار */
     transform: none;
 
     padding: 16px 16px;
