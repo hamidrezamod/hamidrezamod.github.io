@@ -1913,6 +1913,7 @@ main, footer, .dock-nav{
     margin-top: 4px !important;
     gap: 8px !important;
     justify-content: right !important;
+     padding-left: 0px;
 
     font-family: "Doran", sans-serif;
     font-size: 12px !important;
