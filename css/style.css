@@ -828,9 +828,9 @@ h3 {
 
 .dock-nav__menu{
   position: absolute;
-  left: 50%;
+  left: 0;
   bottom: 52px;
-  transform: translateX(-50%);
+  transform: none;
 
   width: 170px;
   padding: 14px 18px;
