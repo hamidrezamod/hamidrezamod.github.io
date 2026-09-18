@@ -2270,3 +2270,16 @@ width: 393px;
     border-radius: 10px;
   }
 }
+
+@media (max-width: 600px){
+  /* وقتی هر مودال باز است، navbar موبایل نمایش داده نشود */
+  body.is-modal-open .mnav{
+    display: none !important;
+  }
+
+  /* closebar باید تمام عرض پنل را بگیرد */
+  .article-modal__closebar,
+  .theatre-modal__closebar{
+    width: 100% !important;
+  }
+}
