@@ -832,6 +832,9 @@ h3 {
   bottom: 52px;
   transform: none;
 
+  padding-left: 16px;
+  padding-right: 16px;
+   
   width: 170px;
   padding: 14px 18px;
 
