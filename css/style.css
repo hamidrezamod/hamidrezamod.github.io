@@ -1130,7 +1130,7 @@ main, footer, .dock-nav{
   z-index: 5;
 width: 1120px;
   height: 88px;
-  padding: 32px 128px 16px;
+  padding: 32px 0px 16px;
 
   background: var(--article-bg);
   display: flex;
