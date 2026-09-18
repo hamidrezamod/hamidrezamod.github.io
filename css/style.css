@@ -1183,10 +1183,10 @@ main, footer, .dock-nav{
   align-items: center;
 }
 
-.article-sheet__media{ width: 548px; }
+.article-sheet__media{ width: 584px; }
 
 .article-sheet__cover{
-  width: 548px;
+  width: 584px;
   height: auto;
   object-fit: cover;
 }
