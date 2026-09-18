@@ -1128,7 +1128,7 @@ main, footer, .dock-nav{
   position: sticky;
   top: 0;
   z-index: 5;
-
+width: 1120px;
   height: 88px;
   padding: 32px 128px 16px;
 
@@ -1870,7 +1870,7 @@ main, footer, .dock-nav{
     position: sticky !important;
     top: 0;
     z-index: 30;
-
+width: 361px;
     height: 64px !important;
     padding: 16px 16px 0 !important;
 
