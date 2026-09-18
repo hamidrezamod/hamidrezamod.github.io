@@ -830,7 +830,7 @@ h3 {
   position: absolute;
   left: 50%;
   bottom: 52px;
-  transform: translateX(-48%);
+  transform: translateX(-50%);
 
   width: 170px;
   padding: 14px 18px;
