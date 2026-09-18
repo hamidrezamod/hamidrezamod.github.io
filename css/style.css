@@ -760,9 +760,9 @@ h3 {
   transform: translateX(-50%);
   z-index: 9999;
 
-  width: 443px;
+  width: 535px;
   height: 52px;
-  padding: 0 18px;
+  padding: 0 16px;
 
   display: flex;
   align-items: center;
@@ -828,7 +828,7 @@ h3 {
 
 .dock-nav__menu{
   position: absolute;
-  left: 50%;
+  left: 81px;
   bottom: 52px;
   transform: translateX(-50%);
 
