@@ -1931,6 +1931,7 @@ main, footer, .dock-nav{
   .article-meta__icon{ width: 13px !important; height: 13px !important; }
 
   .article-sheet__headings{
+     width: 361px;
     margin-top: 8px !important;
     text-align: right !important;
   }
@@ -1946,7 +1947,9 @@ main, footer, .dock-nav{
     text-align: right !important;
   }
 
-  .article-sheet__body{ margin-top: 72px !important; }
+  .article-sheet__body{ 
+     width: 361px;
+     margin-top: 72px !important; }
 
   .article-sec + .article-sec{ margin-top: 64px !important; }
 
