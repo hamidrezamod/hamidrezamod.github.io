@@ -1177,8 +1177,8 @@ width: 1376px;
 
 /* article inner layout (desktop) */
 .article-sheet__hero{
-  width: 1376px;
-   pdding: 0px 128px 0px;
+  width: 1120px;
+   pdding: 0px 0px 0px;
   display: grid;
   grid-template-columns: 548px 1fr;
   column-gap: 32px;
