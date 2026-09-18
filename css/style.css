@@ -1906,6 +1906,7 @@ main, footer, .dock-nav{
 
   /* Article mobile layout from your spec */
   .article-sheet__hero{
+     width: 361px;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
