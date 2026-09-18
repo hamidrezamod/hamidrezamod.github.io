@@ -1195,6 +1195,7 @@ main, footer, .dock-nav{
   margin-top: 8px;
   display: flex;
   justify-content: flex-end;
+   padding-left: 212px;
   align-items: center;
   gap: 16px;
 
