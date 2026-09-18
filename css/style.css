@@ -1810,7 +1810,7 @@ main, footer, .dock-nav{
 
   /* Footer mobile (label font) */
   .site-footer{
-    min-height: auto;
+    min-height: 140px;
     padding-width:  16px;
      padding-top:  12px;
      padding-bottom:  64px;
