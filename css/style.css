@@ -1245,7 +1245,9 @@ main, footer, .dock-nav{
   text-align: right;
 }
 
-.article-sheet__body{ margin-top: 64px; }
+.article-sheet__body{ 
+   width: 1120px;
+   margin-top: 64px; }
 
 .article-sec__title{
   margin: 0 0 16px;
