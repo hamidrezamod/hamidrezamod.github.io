@@ -1194,12 +1194,12 @@ width: 1376px;
 }
 
 .article-sheet__meta{
-   width: 1376px;
+   width: 548px;
   margin-top: 8px;
-   padding: 0px 128px 663px 0px;
+   
   display: flex;
   justify-content: flex-start;
-   padding-right: 570px;
+   
   align-items: center;
   gap: 16px;
 
@@ -1249,8 +1249,8 @@ width: 1376px;
 }
 
 .article-sheet__body{ 
-   width: 1376px;
-   padding: 0px 128px 0px;
+   width: 1120px;
+   padding: 0px 0px 0px;
    margin-top: 64px; }
 
 .article-sec__title{
