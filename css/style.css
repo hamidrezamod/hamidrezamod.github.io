@@ -1203,6 +1203,8 @@ main, footer, .dock-nav{
 
 .article-sheet__hero{
   display: grid;
+   align-items: start; /* ستون عکس از بالا ثابت بماند */
+}
   grid-template-columns: 585px 503px;
   column-gap: 32px;
   align-items: start;
@@ -1265,6 +1267,8 @@ main, footer, .dock-nav{
 /* Titles column: right-aligned and stuck to right edge of its 503px column */
 .article-sheet__headings{
   width: 503px;
+   align-self: center; /* فقط ستون تیترها عمودی وسط می‌شود */
+}
   justify-self: end;
   text-align: right;
 }
