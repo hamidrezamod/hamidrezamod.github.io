@@ -1193,6 +1193,7 @@ main, footer, .dock-nav{
 }
 
 .article-sheet__meta{
+   width: 1120px;
   margin-top: 8px;
   display: flex;
   justify-content: flex-end;
@@ -1916,6 +1917,7 @@ main, footer, .dock-nav{
   .article-sheet__cover{ width: 361px !important; height: auto !important; }
 
   .article-sheet__meta{
+     width: 361px;
     margin-top: 4px !important;
     gap: 8px !important;
     justify-content: right !important;
