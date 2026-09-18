@@ -1177,6 +1177,7 @@ main, footer, .dock-nav{
 
 /* article inner layout (desktop) */
 .article-sheet__hero{
+  width: 1120px;
   display: grid;
   grid-template-columns: 548px 1fr;
   column-gap: 32px;
@@ -1223,7 +1224,9 @@ main, footer, .dock-nav{
   height: 16px;
 }
 
-.article-sheet__headings{ text-align: right; }
+.article-sheet__headings{ 
+   width: 503px;
+   text-align: right; }
 
 .article-sheet__title-en{
   margin: 0;
