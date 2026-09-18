@@ -828,7 +828,7 @@ h3 {
 
 .dock-nav__menu{
   position: absolute;
-  left: 81px;
+  left: 50%;
   bottom: 52px;
   transform: translateX(-50%);
 
