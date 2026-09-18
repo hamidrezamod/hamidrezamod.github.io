@@ -1227,7 +1227,7 @@ main, footer, .dock-nav{
   margin-top: 8px;               /* meta -> image = 8 */
 
   display: flex;
-  justify-content: flex-end;      /* align to right edge */
+  justify-content: flex-start;      /* align to right edge */
   align-items: center;
 
   gap: 16px;                      /* author -> divider -> tag1 -> tag2 */
