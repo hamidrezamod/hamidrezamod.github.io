@@ -722,7 +722,7 @@ h3 {
   background: var(--ink);
   color: var(--background);
   text-align: center;
-  min-height: 240px;
+  min-height: 160px;
   padding: 16px 24px 16px;
 }
 
@@ -1812,7 +1812,7 @@ main, footer, .dock-nav{
   .site-footer{
     min-height: auto;
     padding-width:  16px;
-     padding-top:  24px;
+     padding-top:  12px;
      padding-bottom:  64px;
   }
   .site-footer__designed,
