@@ -607,7 +607,7 @@ h3 {
 }
 
 .resume-item__top{ margin: 0; }
-.resume-item__sub{ margin: 8px 0 0; }
+.resume-item__sub{ margin: 0px 0 0; }
 
 .resume-list{
   list-style: none;
