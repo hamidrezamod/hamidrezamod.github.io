@@ -1367,13 +1367,16 @@ html {
     gap: 16px;
 }
 
+/* Persian Disclaimer - RTL Layout */
 .disclaimer-content-fa {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-   direction: rtl;
+    direction: rtl;
+    flex-direction: row; /* یا هر چه بود، همان بماند */
+    text-align: right;
 }
 
+.disclaimer-content-fa p {
+    text-align: right;
+}
 .disclaimer-icon {
     width: 36.65px;
     height: 36.65px;
