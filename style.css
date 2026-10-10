@@ -1367,6 +1367,13 @@ html {
     gap: 16px;
 }
 
+.disclaimer-content-fa {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+   direction: rtl;
+}
+
 .disclaimer-icon {
     width: 36.65px;
     height: 36.65px;
