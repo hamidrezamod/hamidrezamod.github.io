@@ -1356,33 +1356,43 @@ html {
     transform: translateY(-4px); /* افکت هاور مشابه بقیه دکمه ها */
 }
 
-/* Disclaimer / Note Section */
+/* =========================================
+   Disclaimer / Note Section (اصلاح شده و دقیق)
+   ========================================= */
 .disclaimer-section {
     padding: 64px 0;
 }
 
 .disclaimer-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
+    display: flex !important;
+    flex-direction: row !important; /* تضمین چیدمان افقی و کنار هم در تمامی رزولوشن‌ها */
+    align-items: flex-start !important; /* تراز شدن آیکون با لبه بالایی خط اول متن */
+    gap: 16px !important; /* فاصله دقیق ۱۶ پیکسلی آیکون از متن */
+    width: 100%;
 }
 
-/* Persian Disclaimer - RTL Layout */
-.disclaimer-content-fa {
-    direction: rtl;
-    flex-direction: row; /* یا هر چه بود، همان بماند */
-    text-align: right;
+/* تنظیمات حالت انگلیسی */
+.disclaimer-content.lang-en {
+    direction: ltr !important;
+    text-align: left !important;
 }
 
-.disclaimer-content-fa p {
-    text-align: right;
+/* تنظیمات حالت فارسی (راست‌چین کامل) */
+.disclaimer-content.lang-fa {
+    direction: rtl !important;
+    text-align: right !important;
 }
+
 .disclaimer-icon {
     width: 36.65px;
     height: 36.65px;
-    flex-shrink: 0;
+    flex-shrink: 0 !important; /* جلوگیری از دفرمه شدن یا کوچک شدن آیکون */
+    margin-top: 2px !important; /* هماهنگی و تراز نوری دقیق با خط اول نوشته */
 }
 
+.disclaimer-content p {
+    margin: 0 !important;
+}
 /* استایل های اختصاصی تگ های جدید */
 .text-h3 {
     font-family: 'Manrope', sans-serif;
