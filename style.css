@@ -1356,42 +1356,29 @@ html {
     transform: translateY(-4px); /* افکت هاور مشابه بقیه دکمه ها */
 }
 
-/* =========================================
-   Disclaimer / Note Section (اصلاح شده و دقیق)
-   ========================================= */
+/* Disclaimer / Note Section */
 .disclaimer-section {
-    padding: 64px 0;
+padding: 64px 0;
 }
 
 .disclaimer-content {
-    display: flex !important;
-    flex-direction: row !important; /* تضمین چیدمان افقی و کنار هم در تمامی رزولوشن‌ها */
-    align-items: flex-start !important; /* تراز شدن آیکون با لبه بالایی خط اول متن */
-    gap: 16px !important; /* فاصله دقیق ۱۶ پیکسلی آیکون از متن */
-    width: 100%;
+display: flex;
+align-items: flex-start;
+gap: 16px;
 }
 
-/* تنظیمات حالت انگلیسی */
-.disclaimer-content.lang-en {
-    direction: ltr !important;
-    text-align: left !important;
-}
+.disclaimer-content-fa {
 
-/* تنظیمات حالت فارسی (راست‌چین کامل) */
-.disclaimer-content.lang-fa {
-    direction: rtl !important;
-    text-align: right !important;
+display: flex;
+align-items: flex-start;
+gap: 16px;
+direction: rtl;
 }
 
 .disclaimer-icon {
-    width: 36.65px;
-    height: 36.65px;
-    flex-shrink: 0 !important; /* جلوگیری از دفرمه شدن یا کوچک شدن آیکون */
-    margin-top: 2px !important; /* هماهنگی و تراز نوری دقیق با خط اول نوشته */
-}
-
-.disclaimer-content p {
-    margin: 0 !important;
+width: 36.65px;
+height: 36.65px;
+flex-shrink: 0;
 }
 /* استایل های اختصاصی تگ های جدید */
 .text-h3 {
