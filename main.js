@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ب) عناصر دو ستونه یا سمت چپ
     const leftElements = document.querySelectorAll(`
-        .top-card:nth-child(1),
+        .top-card:nth-child(odd),
         .projects-grid-2 .small-project-card:nth-child(odd),
         .projects-grid-3 .small-project-card:nth-child(1),
         .grid-2 > div:nth-child(odd),
@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
         el.classList.add('animate-on-scroll', 'fade-left');
     });
 
-    // ج) عناصر دو ستونه یا سمت راست
+     // ج) عناصر دو ستونه یا سمت راست
     const rightElements = document.querySelectorAll(`
-        .top-card:nth-child(2),
+        .top-card:nth-child(even),
         .projects-grid-2 .small-project-card:nth-child(even),
         .projects-grid-3 .small-project-card:nth-child(3),
         .grid-2 > div:nth-child(even),
