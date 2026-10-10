@@ -89,5 +89,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+    // --- Language Switcher Logic ---
+    const btnEn = document.getElementById('btn-en');
+    const btnFa = document.getElementById('btn-fa');
+    const textEn = document.querySelectorAll('.lang-en');
+    const textFa = document.querySelectorAll('.lang-fa');
 
+    if (btnEn && btnFa) {
+        // تغییر به فارسی
+        btnFa.addEventListener('click', () => {
+            btnFa.classList.add('active');
+            btnEn.classList.remove('active');
+            
+            textEn.forEach(el => el.style.display = 'none');
+            textFa.forEach(el => el.style.display = 'block');
+            
+            // آپدیت انیمیشن ها بعد از تغییر زبان
+            scrollObserver.disconnect();
+            animatedElements.forEach(el => scrollObserver.observe(el));
+        });
+
+        // تغییر به انگلیسی
+        btnEn.addEventListener('click', () => {
+            btnEn.classList.add('active');
+            btnFa.classList.remove('active');
+            
+            textFa.forEach(el => el.style.display = 'none');
+            textEn.forEach(el => el.style.display = 'block');
+            
+            // آپدیت انیمیشن ها
+            scrollObserver.disconnect();
+            animatedElements.forEach(el => scrollObserver.observe(el));
+        });
+    }
   
