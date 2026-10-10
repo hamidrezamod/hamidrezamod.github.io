@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     
+    // ==========================================
     // 1. انتخاب خودکار عناصر برای انیمیشن
+    // ==========================================
     
     // الف) عناصر تک ستونه (حرکت عمودی)
-    // با اضافه کردن :not(.no-animate) به جاوا اسکریپت میگیم عکس هایی که این کلاس رو دارن رو انیمیشن نده
     const verticalElements = document.querySelectorAll(`
         .bottom-card, 
         .content-image:not(.no-animate), 
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         el.classList.add('animate-on-scroll', 'fade-vertical', 'from-bottom');
     });
 
-    // ب) عناصر دو ستونه یا سمت چپ
+    // ب) عناصر دو ستونه یا سمت چپ (آپدیت شده برای 4 کارته شدن صفحه اصلی)
     const leftElements = document.querySelectorAll(`
         .top-card:nth-child(odd),
         .projects-grid-2 .small-project-card:nth-child(odd),
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         el.classList.add('animate-on-scroll', 'fade-left');
     });
 
-     // ج) عناصر دو ستونه یا سمت راست
+    // ج) عناصر دو ستونه یا سمت راست (آپدیت شده برای 4 کارته شدن صفحه اصلی)
     const rightElements = document.querySelectorAll(`
         .top-card:nth-child(even),
         .projects-grid-2 .small-project-card:nth-child(even),
@@ -49,7 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
         el.classList.add('animate-on-scroll', 'fade-vertical', 'from-bottom');
     });
 
+    // ==========================================
     // 2. راه اندازی Intersection Observer برای اجرای انیمیشن ها
+    // ==========================================
     const observerOptions = {
         root: null,
         rootMargin: "0px",
@@ -74,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }, observerOptions);
+
     // --- تغییر تمام انیمیشن ها به حالت عمودی در موبایل ---
     if (window.innerWidth <= 768) {
         const allAnimated = document.querySelectorAll('.animate-on-scroll');
@@ -84,12 +88,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+    
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     animatedElements.forEach(el => scrollObserver.observe(el));
 
-});
-
-    // --- Language Switcher Logic ---
+    // ==========================================
+    // 3. منطق سوییچر زبان (Language Switcher)
+    // ==========================================
     const btnEn = document.getElementById('btn-en');
     const btnFa = document.getElementById('btn-fa');
     const textEn = document.querySelectorAll('.lang-en');
@@ -98,28 +103,41 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnEn && btnFa) {
         // تغییر به فارسی
         btnFa.addEventListener('click', () => {
+            // اگر از قبل فعال است کاری نکن
+            if (btnFa.classList.contains('active')) return; 
+            
             btnFa.classList.add('active');
             btnEn.classList.remove('active');
             
             textEn.forEach(el => el.style.display = 'none');
             textFa.forEach(el => el.style.display = 'block');
             
-            // آپدیت انیمیشن ها بعد از تغییر زبان
+            // راه اندازی مجدد انیمیشن ها برای محتوای فارسی
             scrollObserver.disconnect();
-            animatedElements.forEach(el => scrollObserver.observe(el));
+            animatedElements.forEach(el => {
+                el.classList.remove('is-visible');
+                scrollObserver.observe(el);
+            });
         });
 
         // تغییر به انگلیسی
         btnEn.addEventListener('click', () => {
+            // اگر از قبل فعال است کاری نکن
+            if (btnEn.classList.contains('active')) return;
+            
             btnEn.classList.add('active');
             btnFa.classList.remove('active');
             
             textFa.forEach(el => el.style.display = 'none');
             textEn.forEach(el => el.style.display = 'block');
             
-            // آپدیت انیمیشن ها
+            // راه اندازی مجدد انیمیشن ها برای محتوای انگلیسی
             scrollObserver.disconnect();
-            animatedElements.forEach(el => scrollObserver.observe(el));
+            animatedElements.forEach(el => {
+                el.classList.remove('is-visible');
+                scrollObserver.observe(el);
+            });
         });
     }
-  
+
+});
