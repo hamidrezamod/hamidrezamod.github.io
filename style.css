@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap');
+
 /* =========================================
    Reset & Global Styles
    ========================================= */
@@ -639,6 +641,22 @@ h5 {
     line-height: normal;
 }
 
+.text-h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: normal;
+    color: #000000;
+}
+
+.text-h4 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #000000;
+}
+
 .text-caption {
     font-family: 'Manrope', sans-serif;
     font-size: 15px;
@@ -923,6 +941,70 @@ html {
         transform: translateY(0);
         filter: blur(0);
     }
+}
+
+/* =========================================
+   Bilingual & HSE Job Specific Styles
+   ========================================= */
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 32px 0;
+}
+
+.lang-btn {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.4;
+}
+
+.lang-btn.active {
+    opacity: 1;
+}
+
+.lang-btn:hover {
+    transform: translateY(-4px);
+}
+
+/* Disclaimer / Note Section */
+.disclaimer-section {
+    padding: 64px 0;
+}
+
+.disclaimer-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.disclaimer-icon {
+    width: 36.65px;
+    height: 36.65px;
+    flex-shrink: 0;
+}
+
+/* Classes for Language Control */
+.lang-fa {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Apply Vazirmatn font to text elements when inside lang-fa */
+.lang-fa .text-h1,
+.lang-fa .text-h2,
+.lang-fa .text-h3,
+.lang-fa .text-h4,
+.lang-fa .text-caption,
+.lang-fa .text-body,
+.lang-fa .meta-label,
+.lang-fa .meta-value {
+    font-family: 'Vazirmatn', sans-serif;
 }
 
 /* =========================================
@@ -1323,98 +1405,6 @@ html {
         margin-bottom: 16px;
     }
 }
-
-
-/* =========================================
-   Bilingual & HSE Job Specific Styles
-   ========================================= */
-/* افزودن فونت فارسی */
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap');
-
-/* Language Switcher */
-.language-switcher {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    padding: 32px 0;
-}
-
-.lang-btn {
-    width: 55px;
-    height: 55px;
-    cursor: pointer;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    opacity: 0.4; /* حالت غیر فعال (کمرنگ) */
-}
-
-.lang-btn.active {
-    opacity: 1; /* حالت فعال */
-}
-
-.lang-btn:hover {
-    transform: translateY(-4px); /* افکت هاور مشابه بقیه دکمه ها */
-}
-
-/* Disclaimer / Note Section */
-.disclaimer-section {
-padding: 64px 0;
-}
-
-.disclaimer-content {
-display: block;
-align-items: flex-start;
-gap: 16px;
-}
-
-.disclaimer-content-fa {
-
-display: block;
-align-items: flex-start;
-gap: 16px;
-direction: rtl;
-}
-
-.disclaimer-icon {
-width: 36.65px;
-height: 36.65px;
-flex-shrink: 0;
-}
-/* استایل های اختصاصی تگ های جدید */
-.text-h3 {
-    font-family: 'Manrope', sans-serif;
-    font-size: 30px;
-    font-weight: 500;
-    line-height: normal;
-    color: #000000;
-}
-
-.text-h4 {
-    font-family: 'Manrope', sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 1.4;
-    color: #000000;
-}
-
-/* کلاس های کنترل زبان */
-.lang-fa {
-    direction: rtl;
-    text-align: right;
-}
-
-/* اعمال فونت وزیرمتن به تمامی کلاس های متنی وقتی داخل lang-fa هستند */
-.lang-fa .text-h1,
-.lang-fa .text-h2,
-.lang-fa .text-h3,
-.lang-fa .text-h4,
-.lang-fa .text-caption,
-.lang-fa .text-body,
-.lang-fa .meta-label,
-.lang-fa .meta-value {
-    font-family: 'Vazirmatn', sans-serif;
-}
-
 
 
 /* ------------- Small Phones (Max Width: 480px) ------------- */
