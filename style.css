@@ -1362,14 +1362,14 @@ padding: 64px 0;
 }
 
 .disclaimer-content {
-display: flex;
+display: block;
 align-items: flex-start;
 gap: 16px;
 }
 
 .disclaimer-content-fa {
 
-display: flex;
+display: block;
 align-items: flex-start;
 gap: 16px;
 direction: rtl;
