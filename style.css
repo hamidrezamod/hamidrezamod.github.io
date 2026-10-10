@@ -1004,7 +1004,7 @@ html {
 .lang-fa .text-body,
 .lang-fa .meta-label,
 .lang-fa .meta-value {
-    font-family: 'Vazirmatn', sans-serif;
+    font-family: 'Vazirmatn', sans-serif !important;
 }
 
 /* =========================================
