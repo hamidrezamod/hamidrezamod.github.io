@@ -558,6 +558,12 @@ h5 {
     gap: 16px; /* فاصله بین مقاطع / زبان ها */
 }
 
+.skill-item {
+    display: flex;
+    align-items: baseline;
+    gap: 40px; /* فاصله بین اسم مدرک، دانشگاه و سال */
+}
+
 .list-item {
     display: flex;
     align-items: baseline;
@@ -1354,6 +1360,13 @@ html {
     .list-container {
         gap: 12px;
     }
+
+    .skill-item { 
+        flex-direction: column; 
+        gap: 16px;
+        align-items: flex-start;
+    }
+   
     .list-item { 
         flex-direction: column; 
         gap: 4px;
